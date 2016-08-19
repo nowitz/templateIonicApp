@@ -1,15 +1,17 @@
 'user strict';
 angular.module('app')
     .factory('BackcallFactory', function ($state, $ionicPlatform, $ionicHistory, $timeout) {
-// VOLA SE PAK TAKHLE    backcallFactory.backcallfun();
+// VOLA SE PAK TAKHLE    BackcallFactory.backButtonCancel();
         var obj = {}
         obj.backButtonCancel = function () {
-            //var backbutton=0;
+            var backbutton=0;
             $ionicPlatform.registerBackButtonAction(function () {
                 if ($state.current.name == "app.home" || $state.current.name == "app.login") {
 
                     /**
-                     * Mostno pro doubleclick na zavreni aplikace
+                     * Moznost pro doubleclick na zavreni aplikace
+                     * nutmo mit nainstalovy: http://ngcordova.com/docs/plugins/toast/
+                     */
 
                      if(backbutton==0){
                         backbutton++;
@@ -18,15 +20,15 @@ angular.module('app')
                     }else{
                         navigator.app.exitApp();
                     }
-                     */
 
-                    /*
+
+                    /**
                      * Moznost pro dialogovy okno s tim jestli chci zavrit aplikaci
-                     */
+
                     var action = confirm("Do you want to Exit?");
                     if (action) {
                         navigator.app.exitApp();
-                    }
+                    }*/
 
                 } else {
                     $ionicHistory.nextViewOptions({
