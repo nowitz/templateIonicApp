@@ -10,7 +10,7 @@ angular.module('app')
 
                     /**
                      * Moznost pro doubleclick na zavreni aplikace
-                     * nutmo mit nainstalovy: http://ngcordova.com/docs/plugins/toast/
+                     * nutno mit nainstalovy: http://ngcordova.com/docs/plugins/toast/
                      */
 
                      if(backbutton==0){
